@@ -1,0 +1,22 @@
+<div class="parent" *ngIf="!option">
+  <div>
+    <h3>User Detail</h3>
+  </div>
+  <div *ngFor="let col of column">
+    <div class="label">
+      {{ col.label }}
+    </div>
+    <div class="label">
+      {{ userData[col.field] }}
+    </div>
+  </div>
+  <br />
+  <div class="btn">
+    <button *ngIf="!option" (click)="enableEditOption()">edit</button>
+    &nbsp;
+    <button *ngIf="!option" [routerLink]="['/user']" (click)="deleteUserData()">
+      delete
+    </button>
+  </div>
+</div>
+<app-form *ngIf="option" [data]="userData" [editable]="true"></app-form>

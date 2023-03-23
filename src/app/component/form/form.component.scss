@@ -1,0 +1,35 @@
+main {
+  background-color: rgba(0, 0, 0, 0.097);
+  width: 50%;
+  height: 50%;
+  margin-top: 100px;
+  margin-left: 350px;
+  position: absolute;
+  display: grid;
+  place-items: center;
+  border: 3px solid black;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.185);
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+  text-align: left;
+}
+
+div {
+  margin-bottom: 20px;
+}
+
+.title {
+  text-align: center;
+}
+
+button {
+  margin-top: 20px;
+  margin-left: 160px;
+}
+
+span{
+  color: red;
+}

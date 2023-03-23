@@ -1,0 +1,59 @@
+<main>
+  <form [formGroup]="form">
+    <div class="title">
+      <h3>{{ editable ? "Update" : "User" }} form</h3>
+    </div>
+    <div *ngFor="let col of column">
+      <ng-container *ngIf="col.type != 'radio'">
+        <ng-container *ngIf="editable && col.label == 'Id'">
+          <label for="">{{ col.label }}</label>
+          <input
+            formControlName="{{ col.field }}"
+            type="{{ col.type }}"
+            [readOnly]="true"
+          />
+        </ng-container>
+        <ng-container *ngIf="editable && col.label != 'Id'">
+          <label for="">{{ col.label }}</label>
+          <input
+            formControlName="{{ col.field }}"
+            type="{{ col.type }}"
+            (change)="checkCrediential($event, col.label)"
+          />
+        </ng-container>
+        <ng-container *ngIf="!editable">
+          <label for="">{{ col.label }}</label>
+          <input
+            formControlName="{{ col.field }}"
+            type="{{ col.type }}"
+            (change)="checkCrediential($event, col.label)"
+          />
+          <br /><span *ngIf="createOption && col.label == 'Id'"
+            >Id is already exist</span
+          >
+        </ng-container>
+      </ng-container>
+
+      <ng-container *ngIf="col.type == 'radio'">
+        <label for="">{{ col.label }}</label>
+        <ng-container *ngFor="let val of col.options">
+          <input
+            formControlName="{{ col.field }}"
+            name="{{ col.field }}"
+            type="radio"
+            [value]="val.value"
+            [checked]="editable"
+          />
+          {{ val.value }}
+        </ng-container>
+      </ng-container>
+    </div>
+    <button
+      (click)="updateForm(form)"
+      [disabled]="form.invalid"
+      [routerLink]="['/user']"
+    >
+      {{ editable ? "update" : "create" }}
+    </button>
+  </form>
+</main>

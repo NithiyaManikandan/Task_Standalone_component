@@ -1,0 +1,104 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "first_name": "Giavn",
+      "last_name": "Fredian",
+      "email": "gfrediani1@senate.gov",
+      "gender": "Female"
+    },
+    {
+      "id": 2,
+      "first_name": "Noel",
+      "last_name": "Beem",
+      "email": "nbea2@imageshack.us",
+      "gender": "Female"
+    },
+    {
+      "id": 3,
+      "first_name": "Willard",
+      "last_name": "Valek",
+      "email": "wvalek3@vk.com",
+      "gender": "Male"
+    },
+    {
+      "id": 4,
+      "first_name": "Giavan",
+      "last_name": "Frediani",
+      "email": "gfrediani1@senate.gov",
+      "gender": "Male"
+    },
+    {
+      "id": 5,
+      "first_name": "Noell",
+      "last_name": "Bean",
+      "email": "nbea2@imageshack.us",
+      "gender": "Female"
+    },
+    {
+      "id": 6,
+      "first_name": "Zara",
+      "last_name": "Valek",
+      "email": "wvalek3@vk.com",
+      "gender": "Female"
+    },
+    {
+      "id": 7,
+      "first_name": "Giavan",
+      "last_name": "Frediani",
+      "email": "gfrediani1@senate.govn",
+      "gender": "Male"
+    },
+    {
+      "id": 8,
+      "first_name": "Noell",
+      "last_name": "Bean",
+      "email": "nbea2@imageshack.us",
+      "gender": "Female"
+    },
+    {
+      "id": 9,
+      "first_name": "Willard",
+      "last_name": "Valek",
+      "email": "wvalek3@vk.com",
+      "gender": "Male"
+    }
+  ],
+  "column": [
+    {
+      "label": "Id",
+      "field": "id",
+      "type": "number"
+    },
+    {
+      "label": "FirstName",
+      "field": "first_name",
+      "type": "string"
+    },
+    {
+      "label": "LastName",
+      "field": "last_name",
+      "type": "string"
+    },
+    {
+      "label": "Email",
+      "field": "email",
+      "type": "string"
+    },
+    {
+      "label": "Gender",
+      "field": "gender",
+      "type": "radio",
+      "options": [
+        {
+          "key": "m",
+          "value": "Male"
+        },
+        {
+          "key": "f",
+          "value": "Female"
+        }
+      ]
+    }
+  ]
+}
